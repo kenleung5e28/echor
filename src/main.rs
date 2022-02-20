@@ -21,5 +21,5 @@ fn main() {
         .get_matches();
     let text = matches.values_of_lossy("text").unwrap();
     let omit_newline = matches.is_present("omit_newline");
-    print!("{}{}", text.join(" "), if omit_newline { " " } else { "\n" });
+    print!("{}{}", text.join(" "), if omit_newline { "" } else { "\n" });
 }
